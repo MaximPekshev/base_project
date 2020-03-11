@@ -57,7 +57,7 @@ class Picture(models.Model):
 	slug 					= models.SlugField(max_length=36, verbose_name='Url', blank=True, db_index=True)
 	good 					= models.ForeignKey('Good', verbose_name='Товар', on_delete=models.CASCADE)
 
-	image					= models.ImageField(upload_to=get_image_name, verbose_name='Изображение 1170х780', null=True, blank=True)
+	image					= models.ImageField(upload_to=get_image_name, verbose_name='Изображение', null=True, blank=True)
 	
 	main_image				= models.BooleanField(verbose_name='Основная картинка', default=False)
 
